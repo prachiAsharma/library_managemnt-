@@ -13,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="great_learning")
+@Table(name = "great_learning")
 @Data
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
@@ -25,12 +25,12 @@ public class GreatLearning {
 	private int id;
 	private String courseName;
 	private String courseType;
-	private Instructor instructor;
-	
+	//private Instructor instructor;
+
 	public int getId() {
 		return id;
 	}
-	
+
 	public GreatLearning(String courseName) {
 		this.courseName = courseName;
 	}
@@ -51,13 +51,12 @@ public class GreatLearning {
 		this.courseType = courseType;
 	}
 
-	public Instructor getInstructor() {
-		return instructor;
-	}
-
-	public void setInstructor(Instructor instructor) {
-		this.instructor = instructor;
-	}
+	/*
+	 * public Instructor getInstructor() { return instructor; }
+	 * 
+	 * public void setInstructor(Instructor instructor) { this.instructor =
+	 * instructor; }
+	 */
 
 	@Override
 	public String toString() {
