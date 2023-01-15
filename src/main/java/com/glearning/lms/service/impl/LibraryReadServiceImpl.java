@@ -15,10 +15,10 @@ import org.springframework.stereotype.Service;
 
 import com.glearning.lms.model.Library;
 import com.glearning.lms.repository.LibraryJpaRepository;
-import com.glearning.lms.service.LIbraryReadService;
+import com.glearning.lms.service.LibraryReadService;
 
 @Service	
-public class LibraryReadServiceImpl implements LIbraryReadService{
+public class LibraryReadServiceImpl implements LibraryReadService{
 	@Autowired
 	LibraryJpaRepository readRepository;
 

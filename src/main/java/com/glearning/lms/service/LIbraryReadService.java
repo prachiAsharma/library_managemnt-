@@ -8,7 +8,7 @@ import org.springframework.data.domain.Sort.Direction;
 
 import com.glearning.lms.model.Library;
 
-public interface LIbraryReadService {
+public interface LibraryReadService {
 	
 	List<Library> getAllLibrary();
 
