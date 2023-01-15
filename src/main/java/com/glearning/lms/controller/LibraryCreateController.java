@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.glearning.lms.model.Library;
 import com.glearning.lms.service.LibraryCreateService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/createService")
 public class LibraryCreateController {
@@ -18,23 +20,19 @@ public class LibraryCreateController {
 	@Autowired
 	LibraryCreateService createService;
 
-	// @ApiOperation(value = "Add Single Library", notes = "This API allows you to
-	// add a single library to Library table")
+	 @ApiOperation(value = "Add Single Library", notes = "This API allows you to add a single library to Library table")
 	@PostMapping("/addSingleLibrary")
 	public String addSingleLibrary(Library library) {
 		return createService.addSingleLibrary(library);
 	}
 
-	// @ApiOperation(value = "Add Multiple Libraries", notes = "This API allows you
-	// to add multiple libraries to Library table")
+	 @ApiOperation(value = "Add Multiple Libraries", notes = "This API allows you to add multiple libraries to Library table")
 	@PostMapping("/insertAllLibraries")
 	public String insertAllLibraries(@RequestBody List<Library> libraries) {
 		return createService.addAllLibraries(libraries);
 	}
 
-	// @ApiOperation(value = "Add Single Library", notes = "This API allows you to
-	// add single library to Library table and it internally uses a combined method
-	// of save and flush")
+	 @ApiOperation(value = "Add Single Library", notes = "This API allows you to add single library to Library table and it internally uses a combined method of save and flush")
 	@PostMapping("/addLibrararywithSaveAndFlush")
 	public Library addLibrararywithSaveAndFlush(Library library) {
 		return createService.addLibrararywithSaveAndFlush(library);
