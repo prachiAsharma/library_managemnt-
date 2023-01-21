@@ -28,6 +28,8 @@ public class DomainUserDetails implements UserDetails {
 
 	@Override
 	public String getPassword() {
+		System.out.println("Inside the getPassword method ");
+		System.out.println("Password :: "+ this.user.getPassword());
 		return this.user.getPassword();
 	}
 

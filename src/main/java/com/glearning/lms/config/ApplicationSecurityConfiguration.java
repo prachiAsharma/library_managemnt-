@@ -36,11 +36,12 @@ public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapt
 				.hasAnyRole("ADMIN")
 			.antMatchers("/existService/**", "/existService**")	
 				.hasAnyRole("ADMIN")
-			.antMatchers("/countService/**", "//countService**")	
+			.antMatchers("/countService/**", "/countService**")	
 				.hasAnyRole("ADMIN")
+			.anyRequest()
+				.fullyAuthenticated()
 			.and()
 			.httpBasic();
-				
 	}
 	
 	/**
