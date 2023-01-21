@@ -1,14 +1,17 @@
 package com.glearning.lms.service.impl;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
 import com.glearning.lms.model.DomainUserDetails;
 import com.glearning.lms.model.User;
 import com.glearning.lms.repository.UserJpaRepository;
 
 @Service
+@Primary
 public class DomainUserDetailsServiceImpl implements UserDetailsService {
 	private final UserJpaRepository userRepository;
 	
